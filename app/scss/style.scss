@@ -6,12 +6,12 @@
 
 .header {
     position: relative;
-    height: 1024px;
+    // height: 1024px;
 }
 
 .header__slider {
     &-item {
-        height: 1024px;
+        height: 100vh;
         background-image: url(../images/header-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -94,11 +94,11 @@
 
 .header__aside {
     position: absolute;
+    height: 100vh;
     top: 0;
     left: 0;
     z-index: 5;
     border-right: 1px solid rgba(#fff, .25);
-    height: 1024px;
     text-align: center;
 
 }
@@ -135,6 +135,32 @@
     }   
 }
 
+.menu-btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid  #fff;
+    position: absolute;
+    right: 20px;
+    top: 75px;
+    z-index: 3;
+    background-color: rgba(255,255,255,0.1) ;
+    &__inner {
+        width: 40px;
+    }
+    &__line {
+        height: 5px;
+        background-color: #4AF6CD;
+        +.menu-btn__line {
+            margin-top: 5px;
+        }
+       
+    }    
+}
+
 .header__date {
     font-weight: 800;
     font-size: 72px;
@@ -144,7 +170,7 @@
          font-size: 16px;
          line-height: 19px;
          letter-spacing: 1.4px;
-         margin-bottom: 30px;
+         margin-bottom: 24px;
          display: block;
          padding-top: 15px;
 
@@ -165,7 +191,8 @@
         position: absolute;
         width: 11px;
         height: 13px;
-        background-image: url(images/marker.svg);
+        left:3px;
+        background-image: url(../images/marker.svg);
 
     }
 }
